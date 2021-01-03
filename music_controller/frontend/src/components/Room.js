@@ -75,6 +75,8 @@ export default class Room extends Component {
       .then((response) => {
         if (!response.ok) {
           return {};
+        } else if(response.length==0){
+          return {};
         } else {
           return response.json();
         }
